@@ -1,0 +1,33 @@
+table {
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 10px solid #52475C;
+    background-color: #FFDAB9;
+    border-radius: 20px;
+    box-shadow: 0 0 0 20px #52475C inset;
+}
+
+th,td {
+    padding: 80px;
+    text-align: left;
+    border-bottom: 5px solid #52475C ;
+
+}
+tr:nth-child(even) {
+    background-color: #C4C4C4;
+    box-shadow: 0 0 0 20px #52475C inset;
+}
+img{
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+}
