@@ -1,10 +1,5 @@
-import axios from "../../node_modules/axios/index.js"
+import axios from "../../node_modules/axios/dist/esm/axios.js"
 import apiConf from "./api.conf.js";
-import app from '../main'; // import the instance
-import {
-    TokenService
-} from "../services/storage.service";
-import store from "../store";
 
 const ApiService = {
     init() {
@@ -16,7 +11,7 @@ const ApiService = {
         /**
          * Set default interceptor to modify reponse
          */
-
+        return this;
     },
 
     setHeader() {
