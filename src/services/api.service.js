@@ -6,8 +6,8 @@ const ApiService = {
         axios.defaults.baseURL = apiConf.baseURL;
         axios.defaults.timeout = 10000; // 10 sec
         axios.defaults.maxRedirects = 0;
-        this.setAuthToken('hl08obl93h1j');
         this.setHeader();
+        this.setAuthToken('hl08obl93h1j');
         return this;
     },
 
