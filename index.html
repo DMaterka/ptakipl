@@ -81,3 +81,16 @@
 </table>
 </body>
 </html>
+<script type="module">
+    import birdspecies from "./src/services/birdspecies.service.js";
+
+    birdspecies.load(['houspa', 'eutspa'])
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<!---->
+<!--https://{{serverName}}/{{contextRoot}}/ref/taxonomy/ebird?species=houspa,eutspa&locale=pl&fmt=json-->
