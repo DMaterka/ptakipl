@@ -3,7 +3,7 @@ import ApiService from "./api.service.js";
 const birdlist = {
     load: async function () {
         try {
-            let response = await ApiService.init().get("product/spplist/PL",[]);
+            let response = await ApiService.init().get("product/spplist/");
             console.log("Response:", response);
             return response.data;
         } catch (error) {
