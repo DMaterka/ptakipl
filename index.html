@@ -78,6 +78,14 @@
 </html>
 <script type="module">
     import birdspecies from "./src/services/birdspecies.service.js";
+    import birdlist from "./src/services/birdlist.service.js";
+    birdlist.load()
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
 
     birdspecies.load(['houspa', 'eutspa'])
         .then(response => {
