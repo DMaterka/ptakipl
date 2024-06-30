@@ -81,23 +81,7 @@
 </body>
 </html>
 <script type="module">
-    import birdspecies from "./services/birdspecies.service.js";
-    import birdlist from "./services/birdlist.service.js";
-    birdlist.load()
-        .then(response => {
-            console.log(response.data);
-        })
-        .catch(error => {
-            console.error(error);
-        });
 
-    birdspecies.load(['houspa', 'eutspa'])
-        .then(response => {
-            console.log(response.data);
-        })
-        .catch(error => {
-            console.error(error);
-        });
 </script>
 <!---->
 <!--https://{{serverName}}/{{contextRoot}}/ref/taxonomy/ebird?species=houspa,eutspa&locale=pl&fmt=json-->

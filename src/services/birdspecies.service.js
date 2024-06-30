@@ -1,5 +1,4 @@
-import ApiService from "./api.service.js";
-
+var ApiService = require("./api.service.js");
 const birdspecies = {
     load: async function (speciesArray) {
         const species = speciesArray.join(',');
@@ -10,9 +9,8 @@ const birdspecies = {
         };
 
         let response = await ApiService.init().get("ref/taxonomy/ebird", params);
-
         return response.data;
     }
 };
 
-export default birdspecies;
+module.exports = birdspecies
