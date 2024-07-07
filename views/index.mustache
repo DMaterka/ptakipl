@@ -10,13 +10,21 @@
 <body>
     <table>
         <tr>
-            <th><div id="nazwa-ptaka">Nazwa <input type="text" value="ptaka"/>
+            <th><div id="nazwa-ptaka">Nazwa <input type="text" value=""/>
                     <button>Sortuj <i class="fa fa-search"></i></button></div>
             </th>
             <th>Zdjęcie</th>
             <th>Drapieżny</th>
             <th>Pokarm</th>
         </tr>
+        {{#birds}}
+        <tr>
+            <td class="nazwa">{{comName}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        {{/birds}}
         <tr>
             <td class="nazwa">Bielik</td>
             <td><img src="ptaki/bielik.jpg" alt="Bielik" width="500" height="600"></td>

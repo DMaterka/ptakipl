@@ -1,4 +1,4 @@
-var axios = require("../../node_modules/axios/dist/node/axios.cjs");
+var axios = require("../../../node_modules/axios/dist/node/axios.cjs");
 var apiConf = require("./api.conf.js");
 
 const ApiService = {
@@ -29,8 +29,6 @@ const ApiService = {
             params: data
         });
     },
-
-    // Other methods here...
 };
 
 module.exports = ApiService

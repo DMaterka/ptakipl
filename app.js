@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var mustacheExpress = require('mustache-express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -11,13 +12,18 @@ var app = express();
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'mustache');
+app.engine('mustache', mustacheExpress());
 app.use(express.static('src'))
 // Define a route to serve the HTML file
-app.get('/', (req, res) => {
-  // Send the HTML file as the response
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+// app.get('/', (req, res) => {
+//   // Send the HTML file as the response
+//
+//
+//
+//   res.render ('index', {pageTitle: "Enter Your Name"});
+//   // res.sendFile(path.join(__dirname, './views/index'));
+// });
 
 app.use(logger('dev'));
 app.use(express.json());
