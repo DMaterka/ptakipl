@@ -1,4 +1,4 @@
-import ApiService from "./api.service.js";
+var ApiService  = require("./api.service.js");
 
 const birdlist = {
     load: async function () {
@@ -11,4 +11,4 @@ const birdlist = {
     }
 };
 
-export default birdlist;
+module.exports = birdlist

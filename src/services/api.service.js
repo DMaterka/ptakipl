@@ -1,5 +1,5 @@
-import axios from "../../node_modules/axios/dist/esm/axios.js";
-import apiConf from "./api.conf.js";
+var axios = require("../../node_modules/axios/dist/node/axios.cjs");
+var apiConf = require("./api.conf.js");
 
 const ApiService = {
     init() {
@@ -33,4 +33,4 @@ const ApiService = {
     // Other methods here...
 };
 
-export default ApiService;
+module.exports = ApiService
